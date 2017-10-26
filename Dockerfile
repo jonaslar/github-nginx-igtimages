@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/rhel7-atomic
 MAINTAINER Jonas Larsen <jonas.larsen@norsk-tipping.no>
 
 COPY epel.repo /etc/yum.repos.d
-RUN microdnf nginx
+RUN microdnf install nginx
 RUN microdnf clean all
 
 COPY conf/nginx.conf /etc/nginx/nginx.conf
