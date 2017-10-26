@@ -1,4 +1,4 @@
-FROM openshift/rhel-atomic
+FROM rhel-atomic
 MAINTAINER Jonas Larsen <jonas.larsen@norsk-tipping.no>
 
 COPY epel.repo /etc/yum.repos.d
