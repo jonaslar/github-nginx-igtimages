@@ -2,9 +2,8 @@ FROM registry.access.redhat.com/rhel7-atomic
 MAINTAINER Jonas Larsen <jonas.larsen@norsk-tipping.no>
 
 COPY epel.repo /etc/yum.repos.d
-RUN microdnf install gperftools-libs && \
-microdnf nginx && \
-microdnf clean all
+RUN microdnf nginx
+RUN microdnf clean all
 
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 COPY conf/static.conf /etc/nginx/conf.d/static.conf
