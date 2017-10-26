@@ -2,8 +2,10 @@ FROM registry.access.redhat.com/rhel7-atomic
 MAINTAINER Jonas Larsen <jonas.larsen@norsk-tipping.no>
 
 COPY epel.repo /etc/yum.repos.d
-RUN microdnf \
-install openssl gperftools-libs nginx rsync;\
+RUN microdnf install openssl && \
+microdnf install openssl && \
+microdnf install gperftools-libs && \
+microdnf nginx rsync;\
 microdnf clean all
 
 COPY conf/nginx.conf /etc/nginx/nginx.conf
