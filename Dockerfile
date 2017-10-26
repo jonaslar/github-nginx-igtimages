@@ -1,4 +1,4 @@
-FROM rhel-atomic
+FROM rhel-7/rhel-atomic
 MAINTAINER Jonas Larsen <jonas.larsen@norsk-tipping.no>
 
 COPY epel.repo /etc/yum.repos.d
