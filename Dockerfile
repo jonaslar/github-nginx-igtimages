@@ -1,4 +1,4 @@
-FROM rhel-7/rhel-atomic
+FROM registry.access.redhat.com/rhel7-atomic
 MAINTAINER Jonas Larsen <jonas.larsen@norsk-tipping.no>
 
 COPY epel.repo /etc/yum.repos.d
