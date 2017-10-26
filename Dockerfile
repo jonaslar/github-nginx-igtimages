@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/rhel7-atomic
 MAINTAINER Jonas Larsen <jonas.larsen@norsk-tipping.no>
 
 COPY epel.repo /etc/yum.repos.d
-RUN microdnf --enablerepo=rhel-7-server-rpms \
+RUN microdnf \
 install openssl gperftools-libs nginx rsync;\
 microdnf clean all
 
