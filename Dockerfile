@@ -3,9 +3,8 @@ MAINTAINER Jonas Larsen <jonas.larsen@norsk-tipping.no>
 
 COPY epel.repo /etc/yum.repos.d
 RUN microdnf install openssl && \
-microdnf install openssl && \
 microdnf install gperftools-libs && \
-microdnf nginx rsync;\
+microdnf nginx && \
 microdnf clean all
 
 COPY conf/nginx.conf /etc/nginx/nginx.conf
